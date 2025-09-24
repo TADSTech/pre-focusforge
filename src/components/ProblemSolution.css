@@ -1,0 +1,130 @@
+.problemsolution {
+  padding: 5rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-light) 0%,
+    rgba(58, 134, 255, 0.1) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.problemsolution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.problemsolution-card {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background-color: var(--color-bg-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  animation: fadeInUp 1s ease-out;
+}
+
+.problemsolution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.problem {
+  animation-delay: 0.2s;
+}
+
+.solution {
+  animation-delay: 0.4s;
+}
+
+.problemsolution-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.problemsolution-description {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+  line-height: 1.8;
+  opacity: 0.85;
+  animation: fadeIn 1.5s ease-out 0.3s;
+  animation-fill-mode: both;
+}
+
+.problemsolution-button {
+  margin-top: 1.5rem;
+  padding: 0.875rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  transform: translateY(0);
+}
+
+.problemsolution-button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.85; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .problemsolution {
+    background: linear-gradient(
+      135deg,
+      var(--color-bg-dark) 0%,
+      rgba(58, 134, 255, 0.2) 100%
+    );
+  }
+
+  .problemsolution-card {
+    background-color: var(--color-bg-dark);
+  }
+
+  .problemsolution-title {
+    color: var(--color-text-light);
+  }
+
+  .problemsolution-description {
+    color: var(--color-text-light);
+  }
+}
+
+@media (max-width: 768px) {
+  .problemsolution-title {
+    font-size: 1.75rem;
+  }
+
+  .problemsolution-description {
+    font-size: 1rem;
+  }
+
+  .problemsolution-grid {
+    grid-template-columns: 1fr;
+  }
+}

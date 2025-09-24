@@ -1,0 +1,116 @@
+:root {
+  --color-primary: #3a86ff;
+  --color-primary-hover: #2f6cd1;
+  --color-secondary: #ffbe0b;
+  --color-bg-dark: #1c1c1e;
+  --color-bg-light: #f5f5f7;
+  --color-text-dark: #111827;
+  --color-text-light: #f9fafb;
+  --radius: 0.75rem;
+  --transition: all 0.25s ease-in-out;
+
+  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-light) 0%,
+    rgba(58, 134, 255, 0.1) 100%
+  );
+  color: var(--color-text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 0.5em 0;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* Paragraphs */
+p {
+  margin: 1em 0;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+
+/* Buttons */
+button {
+  border-radius: var(--radius);
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+button:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Utility */
+section {
+  padding: 4rem 2rem;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(
+    135deg,
+    var(--color-bg-dark) 0%,
+    rgba(58, 134, 255, 0.1) 100%
+  );
+    color: var(--color-text-light);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-light);
+  }
+  p {
+    color: var(--color-text-light);
+  }
+  button {
+    background-color: var(--color-primary);
+  }
+}

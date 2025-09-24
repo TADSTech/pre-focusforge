@@ -1,0 +1,121 @@
+.whoweare {
+  padding: 5rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-light) 0%,
+    rgba(255, 190, 11, 0.1) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.whoweare-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.whoweare-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.whoweare-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  opacity: 0.9;
+}
+
+.whoweare-description {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+  opacity: 0.85;
+  animation: fadeIn 1.5s ease-out 0.3s;
+  animation-fill-mode: both;
+}
+
+.whoweare-cta {
+  margin-top: 2rem;
+}
+
+.whoweare-button {
+  padding: 0.875rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  transform: translateY(0);
+}
+
+.whoweare-button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.85; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .whoweare {
+    background: linear-gradient(
+      135deg,
+      var(--color-bg-dark) 0%,
+      rgba(255, 190, 11, 0.2) 100%
+    );
+  }
+
+  .whoweare-title {
+    color: var(--color-text-light);
+  }
+
+  .whoweare-subtitle {
+    color: var(--color-text-light);
+  }
+
+  .whoweare-description {
+    color: var(--color-text-light);
+  }
+}
+
+@media (max-width: 640px) {
+  .whoweare-title {
+    font-size: 2rem;
+  }
+
+  .whoweare-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .whoweare-description {
+    font-size: 1rem;
+  }
+}
