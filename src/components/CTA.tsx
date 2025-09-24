@@ -10,14 +10,12 @@ export default function CTA() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Validate email input
     if (!email.trim()) {
       setStatus('Please enter an email to join.');
       setStatusType('error');
       return;
     }
 
-    // Check if Supabase client is initialized
     if (!supabase) {
       setStatus('Unable to connect to the server. Try again later.');
       setStatusType('error');
@@ -33,33 +31,28 @@ export default function CTA() {
         .insert([{ email }]);
 
       if (error) {
-        // Handle specific Supabase errors
         if (error.code === '23505') {
-          // Duplicate email (unique constraint violation)
           setStatus('This email is already on the waitlist. You’re set!');
           setStatusType('success');
         } else if (error.code === '22007' || error.message.includes('invalid')) {
-          // Invalid email format
           setStatus('Please enter a valid email address.');
           setStatusType('error');
         } else {
-          // Generic error
           setStatus('Something went wrong. Please try again.');
           setStatusType('error');
         }
       } else {
-        setStatus('Thanks for joining the waitlist! Forge ahead.');
+        setStatus('Thanks for joining the FocusForge waitlist! 🚀');
         setStatusType('success');
         setEmail('');
       }
     } catch (unexpectedError) {
       setStatus('An unexpected error occurred. Please try again.');
       setStatusType('error');
-      console.log(unexpectedError)
+      console.error(unexpectedError);
     }
   };
 
-  // Auto-dismiss status message after 3 seconds
   useEffect(() => {
     if (status) {
       const timer = setTimeout(() => {
@@ -71,29 +64,61 @@ export default function CTA() {
   }, [status, statusType]);
 
   return (
-    <section id="cta" className="cta container">
+    <section
+      id="cta"
+      className="cta container"
+      role="region"
+      aria-labelledby="cta-title"
+      aria-describedby="cta-subtitle"
+    >
       <div className="cta-content">
-        <h2 className="cta-title">Ready to Forge Your Focus?</h2>
-        <p className="cta-subtitle">
-          Take the first step to unstoppable habits. Join our waitlist now and be the first to transform your productivity.
+        {/* ✅ SEO keyword-rich heading */}
+        <h2 id="cta-title" className="cta-title">
+          Ready to Build Lasting Habits with FocusForge?
+        </h2>
+
+        {/* ✅ Subtitle emphasizes benefits */}
+        <p id="cta-subtitle" className="cta-subtitle">
+          Join our exclusive waitlist and be the first to access{" "}
+          <strong>habit tracking tools</strong> that boost your{" "}
+          <em>focus, consistency, and productivity</em>.
         </p>
+
         <form className="cta-form" onSubmit={handleSubmit}>
+          <label htmlFor="email-input" className="sr-only">
+            Enter your email to join the FocusForge waitlist
+          </label>
           <input
+            id="email-input"
             type="email"
-            placeholder="Enter your email to start"
+            placeholder="Enter your email address"
             className="cta-input"
-            aria-label="Email for waitlist"
+            aria-label="Email address for waitlist signup"
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
-          <button type="submit" className="cta-button">Join the Waitlist</button>
+          <button
+            type="submit"
+            className="cta-button"
+            aria-label="Join the FocusForge waitlist"
+          >
+            Join the Waitlist
+          </button>
         </form>
+
+        {/* ✅ Trust + urgency */}
         <p className="cta-motivation">
-          Your journey to consistency starts here. Act now!
+          Over <strong>1,000+ students and creators</strong> are already forging
+          their focus. Don’t miss early access!
         </p>
+
         {status && (
-          <div className={`status-bar status-${statusType}`}>
+          <div
+            className={`status-bar status-${statusType}`}
+            role="status"
+            aria-live="polite"
+          >
             <p className="status-text">{status}</p>
           </div>
         )}
