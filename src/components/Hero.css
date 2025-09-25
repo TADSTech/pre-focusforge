@@ -29,6 +29,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   animation: scaleIn 1.2s ease-out;
   flex-shrink: 0;
+  margin-top: 30px;
 }
 
 .hero-text-content {

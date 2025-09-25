@@ -73,7 +73,6 @@ export default function Hero() {
     >
       <div className="hero-content">
         <div className="hero-logo-wrapper">
-          {/* ✅ alt text optimized for branding + keywords */}
           <img
             src={Logo}
             alt="FocusForge Logo - Productivity and Habit Tracking"
@@ -84,19 +83,17 @@ export default function Hero() {
         </div>
 
         <div className="hero-text-content">
-          {/* ✅ h1 is keyword-rich */}
           <h1 id="hero-title" className="hero-title">
             Forge Your Focus – Build Habits That Last
           </h1>
 
-          {/* ✅ strong subtitle with keywords */}
           <p id="hero-subtitle" className="hero-subtitle">
             FocusForge helps you <strong>track your habits</strong>, 
             <strong> stay consistent</strong>, and 
-            <strong> achieve your goals</strong> — one day at a time.
+            <strong> achieve your goals</strong>. <i>one day at a time.</i> 
           </p>
 
-          {/* ✅ form is semantic and labeled */}
+
           <form className="hero-form" onSubmit={handleSubmit}>
             <label htmlFor="waitlist-email" className="sr-only">
               Enter your email to join the FocusForge waitlist

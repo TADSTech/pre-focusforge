@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="navbar-container container">
         <div className="navbar-logo">
-          {/* ✅ alt text improved for SEO */}
+          
           <a href="/" aria-label="FocusForge Home">
             <img
               src={Logo}
@@ -29,7 +29,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Hamburger toggle */}
+
         <button
           className={`navbar-toggle ${isMenuOpen ? 'active' : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -37,12 +37,14 @@ export default function Navbar() {
           aria-controls="navbar-menu"
           aria-label="Toggle navigation menu"
         >
-          <span className="navbar-toggle-icon"></span>
-          <span className="navbar-toggle-icon"></span>
-          <span className="navbar-toggle-icon"></span>
+          <span className="hamburger-icon">
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </span>
         </button>
 
-        {/* ✅ use <a> instead of <span> so crawlers recognize links */}
+
         <ul id="navbar-menu" className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
             <a

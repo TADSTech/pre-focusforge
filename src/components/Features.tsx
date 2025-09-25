@@ -11,12 +11,11 @@ export default function Features() {
       aria-labelledby="features-title"
       aria-describedby="features-subtitle"
     >
-      {/* ✅ Strong, keyword-rich heading */}
       <h2 id="features-title" className="features-title">
         Why Choose FocusForge for Habit Tracking?
       </h2>
 
-      {/* ✅ Subtitle with key phrase */}
+
       <p id="features-subtitle" className="features-subtitle">
         FocusForge helps you <strong>build lasting habits</strong> with
         <em> progress tracking</em>, <em>gamification</em>, and a
@@ -70,7 +69,7 @@ export default function Features() {
           <h3 className="feature-title">Simple & Focused</h3>
           <p className="feature-description">
             No unnecessary clutter. FocusForge provides a clean, intuitive
-            interface that keeps your attention where it belongs—on building
+            interface that keeps your attention where it belongs, on building
             habits that last.
           </p>
         </div>

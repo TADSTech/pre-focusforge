@@ -65,6 +65,11 @@
 
 .footer-link-button {
   cursor: pointer;
+  color: var(--color-text-light);
+}
+
+.footer-link-button:hover { 
+    color: var(--color-text-light);
 }
 
 .footer-copyright {
@@ -165,6 +170,15 @@
     );
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .footer-link-button{
+    color: var(--color-text-dark);
+  }
+
+  .footer-link-button:hover { 
+    color: var(--color-text-light);
   }
 
   .footer-tagline {

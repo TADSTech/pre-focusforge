@@ -72,12 +72,11 @@ export default function CTA() {
       aria-describedby="cta-subtitle"
     >
       <div className="cta-content">
-        {/* ✅ SEO keyword-rich heading */}
         <h2 id="cta-title" className="cta-title">
           Ready to Build Lasting Habits with FocusForge?
         </h2>
 
-        {/* ✅ Subtitle emphasizes benefits */}
+
         <p id="cta-subtitle" className="cta-subtitle">
           Join our exclusive waitlist and be the first to access{" "}
           <strong>habit tracking tools</strong> that boost your{" "}
@@ -107,7 +106,6 @@ export default function CTA() {
           </button>
         </form>
 
-        {/* ✅ Trust + urgency */}
         <p className="cta-motivation">
           Over <strong>1,000+ students and creators</strong> are already forging
           their focus. Don’t miss early access!

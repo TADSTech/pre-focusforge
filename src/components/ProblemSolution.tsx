@@ -15,7 +15,6 @@ export default function ProblemSolution() {
       aria-labelledby="problem-title solution-title"
     >
       <div className="problemsolution-grid">
-        {/* Problem Block */}
         <div className="problemsolution-card problem">
           <h2 id="problem-title" className="problemsolution-title">
             The Productivity Problem
@@ -29,7 +28,7 @@ export default function ProblemSolution() {
           </p>
         </div>
 
-        {/* Solution Block */}
+
         <div className="problemsolution-card solution">
           <h2 id="solution-title" className="problemsolution-title">
             The FocusForge Solution
@@ -39,7 +38,7 @@ export default function ProblemSolution() {
             combines <em>habit tracking</em>, <em>progress visualization</em>,
             and <em>gamification</em> to keep you consistent. With streak
             counters, achievement badges, and progress charts, FocusForge helps
-            you build habits that stick—while staying enjoyable and practical
+            you build habits that stick while staying enjoyable and practical
             for everyday use.
           </p>
           <button

@@ -64,18 +64,17 @@ export default function Footer() {
           </button>
         </nav>
 
-        {/* ✅ Contact info with <address> for SEO */}
+        
         <address className="footer-contact">
           📧 <a href="mailto:focusforgeapp@outlook.com">focusforgeapp@outlook.com</a>
         </address>
 
-        {/* ✅ Copyright with <small> */}
         <p className="footer-copyright">
           <small>© {new Date().getFullYear()} FocusForge. All rights reserved.</small>
         </p>
       </div>
 
-      {/* ✅ Modal for privacy policy */}
+
       {showPolicy && (
         <div className="modal-overlay" onClick={() => setShowPolicy(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

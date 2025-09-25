@@ -16,19 +16,17 @@ export default function WhoWeAre() {
       aria-describedby="whoweare-description"
     >
       <div className="whoweare-content">
-        {/* ✅ h2 with keyword focus */}
         <h2 id="whoweare-title" className="whoweare-title">
           Who We Are – The Team Behind FocusForge
         </h2>
 
-        {/* ✅ Strong subtitle with branding + keywords */}
         <p className="whoweare-subtitle">
           FocusForge is your <strong>productivity partner</strong> for 
           <em> building better habits</em> and 
           <em> unlocking your potential</em>.
         </p>
 
-        {/* ✅ Keyword-rich description */}
+
         <p id="whoweare-description" className="whoweare-description">
           Born from a community of students and creators, FocusForge was built
           to solve one core challenge: <strong>staying consistent</strong> in a world
@@ -38,7 +36,7 @@ export default function WhoWeAre() {
           reach your goals, and grow daily.
         </p>
 
-        {/* ✅ Button with descriptive aria-label */}
+
         <div className="whoweare-cta">
           <button
             className="whoweare-button"
